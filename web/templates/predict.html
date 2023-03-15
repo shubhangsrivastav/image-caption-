@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>IMAGE CAPTION GENERATOR</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+        .plot-img {
+            display: block;
+            height: 70vh;
+            width: 80vw;
+        }
+        body{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        h1{
+            text-align: center;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Image Caption Generator </h1>
+    <img class="plot-img" src="{{ url_for('static',filename=id) }}" alt="image.jpg">
+    <h1>{{predicted}}</h1>
+
+</body>
+
+</html>

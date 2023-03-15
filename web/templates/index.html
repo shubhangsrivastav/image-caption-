@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Image Caption Generator</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <style>
+        body {
+            background: url("../static/backround.jpg");
+            background-size: 100%;
+        }
+
+        /* 
+        .form-group {
+            margin: 0 auto;
+            width: 50%;
+        }
+
+        .btn {
+            width: 10%;
+        } */
+        .container {
+            margin-top: 10em;
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+            width: 35vw;
+            gap: 2em;
+            background-color: white;
+            height: 20em;
+            padding: 2em;
+            border-radius: 1em;
+            border: 1px solid black
+        }
+
+        h1 {
+            font-weight: bold;
+        }
+
+        .form-group {
+            width: 20em;
+        }
+
+        #id {
+            height: 2.5em;
+        }
+
+        .btn {
+            width: 6em;
+            height: 2.5em;
+            background-color: #0138FF;
+        }
+
+        form {
+            display: flex;
+
+            gap: 2em;
+        }
+
+        .violet {
+            color: #C801FF;
+        }
+
+        .green {
+            color: #01FFC8;
+        }
+
+        .yellow {
+            color: #FFC801;
+        }
+
+        input {
+            text-align: center;
+        }
+
+        ::-webkit-input-placeholder {
+            text-align: center;
+        }
+
+        :-moz-placeholder {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Image Caption <span class="violet">Generator</span></h1>
+
+        <form action="/predict" method="POST">
+            <div class="form-group">
+                <input type="text" class="form-control"  id="id" name="id" placeholder="Enter Image ID">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+
+</html>
